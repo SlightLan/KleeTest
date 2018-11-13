@@ -1,0 +1,13 @@
+Error: memory error: out of bound pointer
+File: /home/klee/RBT/src/cpp2/test.c
+Line: 1030
+assembly.ll line: 2586
+Stack: 
+	#000002586 in calculate (c=27962272) at /home/klee/RBT/src/cpp2/test.c:1030
+	#100000046 in main () at /home/klee/RBT/src/cpp2/test.c:46
+Info: 
+	address: 28161519
+	next: object at 28161520 of size 99
+		MO43[99] allocated at calculate():  %optr = alloca [99 x i8], align 16
+	prev: object at 28161392 of size 4
+		MO47[4] allocated at calculate():  %num_stack_index = alloca i32, align 4
